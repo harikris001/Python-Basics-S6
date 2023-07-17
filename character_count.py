@@ -1,8 +1,4 @@
 text = input("Enter the text: ")
-freq = []
-
-for i in range(len(text)):
-    freq.append(0)
 
 char_dict = dict()
 
