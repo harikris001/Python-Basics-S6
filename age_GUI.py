@@ -16,19 +16,19 @@ root = tk.Tk()
 
 root.title("Age Calculator")
 
-date_label = tk.Label(text = "Day")
-date_entry = tk.Entry()
+date_label = tk.Label(root,text = "Day")
+date_entry = tk.Entry(root)
 
-month_label = tk.Label(text = "Month")
-month_entry = tk.Entry()
+month_label = tk.Label(root, text = "Month")
+month_entry = tk.Entry(root)
 
-year_label = tk.Label(text = "year")
-year_entry = tk.Entry()
+year_label = tk.Label(root,text = "year")
+year_entry = tk.Entry(root)
 
-age_label = tk.Label(text="age")
-age_entry = tk.Entry()
+age_label = tk.Label(root,text="age")
+age_entry = tk.Entry(root)
 
-button = tk.Button(text = "calculate", command=age_calc)
+button = tk.Button(root, text = "calculate", command=age_calc)
 
 date_label.pack()
 date_entry.pack()
