@@ -1,5 +1,8 @@
 def median_value(numList):
-    if len(numList) % 2 == 1:
+    # return 0 if list is empty
+    if numList == []:
+        return 0
+    elif len(numList) % 2 == 1:
         # midlle value of list
         return numList[(len(numList)//2)]
     else:
@@ -7,6 +10,9 @@ def median_value(numList):
         return (numList[len(numList)//2] + numList[(len(numList)//2) - 1]) / 2
     
 def mean_value(numList):
+    # return 0 if list is empty
+    if numList == []:
+        return 0
     sum = 0
     for num in numList:
         sum += num
@@ -14,6 +20,9 @@ def mean_value(numList):
     return sum/len(numList)
 
 def mode_value(numList):
+    # return 0 if list is empty
+    if numList == []:
+        return 0
     # filtering unique elements from list
     unique_numList = list(set(numList))
     max_freq = 0
@@ -25,11 +34,11 @@ def mode_value(numList):
             mode = num
     return mode
 
-numbers  = input("Enter numbers with spaces: ")
+numbers  = []
 
-numbers = list(map(int,numbers.strip().split(' '))) # strip is used to remove blank space in front and back of input string
-                                                    # split will split the string at the spaces.
+def main(numbers):
+    print(f"median value: {median_value(numbers)}")
+    print(f"Mean value: {mean_value(numbers)}")
+    print(f"Mode value: {mode_value(numbers)}")
 
-print(f"median value: {median_value(numbers)}")
-print(f"Mean value: {mean_value(numbers)}")
-print(f"Mode value: {mode_value(numbers)}")
+main(numbers)
